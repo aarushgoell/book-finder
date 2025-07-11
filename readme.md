@@ -1,80 +1,53 @@
-📚 Book Finder – AI-Powered Book Recommendation App
+# 📚 Book Finder – AI-Powered Book Recommendation App
 
-A full-stack web application that recommends books based on user prompts using an AI/LLM backend. Users can input a theme or idea (e.g., "space adventure", "romantic classics"), and the app responds with 5 personalized book suggestions, including title, summary, and genre.
+A full-stack web application that recommends books based on a theme or idea using AI.  
+Users can type a prompt like `"romantic novels"` or `"books about dragons"` and get personalized suggestions.
 
-🚀 Features
+---
 
-✅ User enters any topic or keyword prompt
+## 🚀 Features
 
-✅ Flask backend calls a mocked or LLM-powered function
+- 🔍 Search for books using natural language (e.g., "romantic classics", "space adventure")
+- ⚙️ Flask backend processes the request using a mocked LLM (or real API)
+- ⚡ React frontend displays clean, responsive book cards
+- 🧩 Easy to switch from mock to real LLM (OpenAI or Hugging Face)
 
-✅ JSON response with 5 recommended books
+---
 
-✅ React frontend displays the books in a clean, responsive UI
+## 🧠 Tech Stack
 
-✅ Ready to plug in with OpenAI, Hugging Face, or any LLM API
+**Frontend:**
+- React + Vite
+- Axios
+- Tailwind CSS *(optional)*
 
-🧠 Tech Stack
+**Backend:**
+- Python + Flask
+- RESTful API (`/api/books`)
+- CORS enabled
 
-Frontend
 
-React + Vite
+---
 
-Axios for HTTP requests
+## ⚙️ How to Run Locally
 
-Tailwind CSS (optional) for UI styling
+### 🐍 Backend (Flask)
+```
+  cd backend
+  python -m venv venv
+  source venv/bin/activate  # or venv\\Scripts\\activate on Windows
+  pip install -r requirements.txt
+  python app.py
 
-Backend
+  Runs on: http://localhost:5000
+  
+⚛️ Frontend (React)
+   cd frontend
+   npm install
+   npm run dev
+   Runs on: http://localhost:5173
 
-Python + Flask
-
-CORS enabled for frontend-backend integration
-
-Mocked LLM response or real LLM integration (OpenAI / Hugging Face)
-
-📁 Folder Structure
-
-/book-finder
-├── backend
-│   ├── app.py                 # Flask API with /api/books endpoint
-│   ├── open_Api.py            # Contains get_book_recommendations(prompt)
-│   └── requirements.txt
-
-├── frontend
-│   ├── src
-│   │   ├── App.jsx            # Main app component
-│   │   ├── BookForm.jsx       # Input field and Search button
-│   │   ├── BookList.jsx       # Displays books as cards
-│   │   └── index.css
-│   └── vite.config.js
-
-⚙️ How to Run the App
-
-1. Clone the Repository
-
-git clone https://github.com/aarushgoel/book-finder.git
-cd book-finder
-
-2. Backend Setup
-
-cd backend
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate (Windows)
-pip install -r requirements.txt
-python app.py
-
-Server runs at http://localhost:5000
-
-3. Frontend Setup
-
-cd frontend
-npm install
-npm run dev
-
-Frontend runs at http://localhost:5173
-
-🧪 Example Prompt & Output
-
+🔁 Example Prompt & Output
 Prompt: fantasy books with dragons and magic
 
 Response:
@@ -90,42 +63,47 @@ Response:
     "summary": "Bilbo Baggins goes on a quest to reclaim treasure from a dragon.",
     "genre": "Fantasy"
   }
-  ... 3 more
 ]
 
 📝 Notes
+ 
+  LLM is mocked right now for testing purposes.
 
-If using a mocked LLM, make sure mistral_utils.py returns a JSON-formatted string.
+  Replace mistral_utils.py with OpenAI/HuggingFace integration if needed.
 
-You can replace the mocked function with a real OpenAI or Hugging Face API call.
+  CORS is enabled on backend for frontend connection.
 
-CORS must be enabled in Flask if frontend and backend are running separately.
-
-Environment variables should store API keys securely if deployed.
+  API key (if added) should be stored in .env.
 
 🌐 Deployment Tips
+   Backend (Render):
 
-Backend (Render)
+   Create a web service
 
-Create a new web service
+   Build command: pip install -r requirements.txt
 
-Set build command to: pip install -r requirements.txt
+   Start command: python app.py
 
-Start command: python app.py
+   frontend (Vercel/Netlify):
 
-Add cors and flask to requirements.txt
+   Upload the frontend/ folder or connect to GitHub
 
-Frontend (Vercel or Netlify)
+   Update API URL from localhost to your Render URL
 
-Just drag & drop the frontend folder or connect GitHub repo
+✅ Submission Checklist
+   Deployed backend (Render)
 
-Set base API URL to backend deployment URL
+   Deployed frontend (Vercel/Netlify)
 
-🎥 Submission Checklist
+   GitHub repo with README
+
+   ChatGPT conversation link
+
+   Video demo explaining your app
 
 
+👨‍💻 Author
+Aarush Goel
+Full Stack Developer
 
-🙌 Author
-
-Aarush GoelFull Stack Developer • React • Flask • OpenAI IntegrationGitHub | LinkedIn
 
