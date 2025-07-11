@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import json 
 
 from flask_cors import CORS
+import os
 
 from open_Api import get_book_recommendations
 
@@ -24,4 +25,4 @@ def recommendBooks():
         return jsonify({"error": "Invalid JSON format from LLM"}), 500
 
 if __name__ == "__main__":
-    app.run(host = '0.0.0.0',debug=True)
+       app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)

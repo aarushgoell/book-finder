@@ -11,9 +11,12 @@ function useGetBooks(prompt) {
     const fetchBooks = async () => {
       setLoading(true);
       try {
-        const resp = await axios.post("http://localhost:5000/api/books", {
-          prompt: prompt,
-        });
+        const resp = await axios.post(
+          "https://book-finder-dotc.onrender.com/api/books",
+          {
+            prompt: prompt,
+          }
+        );
         setBooks(resp.data);
       } catch (err) {
         console.error("Error fetching books:", err);

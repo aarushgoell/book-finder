@@ -5,6 +5,8 @@ Users can type a prompt like `"romantic novels"` or `"books about dragons"` and 
 
 ---
 
+##  Live Link : (https://book-finder-sable-two.vercel.app/)
+
 ## 🚀 Features
 
 - 🔍 Search for books using natural language (e.g., "romantic classics", "space adventure")
@@ -17,21 +19,23 @@ Users can type a prompt like `"romantic novels"` or `"books about dragons"` and 
 ## 🧠 Tech Stack
 
 **Frontend:**
+
 - React + Vite
 - Axios
-- Tailwind CSS *(optional)*
+- Tailwind CSS _(optional)_
 
 **Backend:**
+
 - Python + Flask
 - RESTful API (`/api/books`)
 - CORS enabled
-
 
 ---
 
 ## ⚙️ How to Run Locally
 
 ### 🐍 Backend (Flask)
+
 ```
   cd backend
   python -m venv venv
@@ -40,7 +44,7 @@ Users can type a prompt like `"romantic novels"` or `"books about dragons"` and 
   python app.py
 
   Runs on: http://localhost:5000
-  
+
 ⚛️ Frontend (React)
    cd frontend
    npm install
@@ -66,7 +70,7 @@ Response:
 ]
 
 📝 Notes
- 
+
   LLM is mocked right now for testing purposes.
 
   Replace mistral_utils.py with OpenAI/HuggingFace integration if needed.
@@ -107,3 +111,4 @@ Aarush Goel
 Full Stack Developer
 
 
+```
